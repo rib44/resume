@@ -3,7 +3,12 @@ import json
 import logging
 import azure.functions as func
 from azure.data.tables import TableClient, UpdateMode
-from azure.core.exceptions import ResourceModifiedError
+from azure.core.exceptions import (
+    ResourceModifiedError,
+    ResourceNotFoundError,
+    ResourceExistsError
+)
+from typing import cast
 
 # Constants
 TABLE_NAME = "visitorCount"
@@ -11,10 +16,10 @@ PARTITION_KEY = "P1"
 ROW_KEY = "R1"
 UPDATE_RETRY = 5
 
-CONNECTION_STRING = os.getenv("CONNECTION_STRING")
-logging.info("Connection string loaded") # REMOVE
+CONNECTION_STRING = cast(str, os.getenv("CONNECTION_STRING"))
 
 app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
+
 
 def get_table_client() -> TableClient:
     """
@@ -35,12 +40,20 @@ def ensure_counter_exists(table_client: TableClient) -> None:
     """
     try:
         table_client.get_entity(PARTITION_KEY, ROW_KEY)
-    except Exception:
-        table_client.create_entity({
-            "PartitionKey": PARTITION_KEY,
-            "RowKey": ROW_KEY,
-            "visitors": 0
-        })
+    except ResourceNotFoundError:
+        try:
+            table_client.create_entity({
+                "PartitionKey": PARTITION_KEY,
+                "RowKey": ROW_KEY,
+                "visitors": 0
+            })
+            logging.info("Visitor counter entity created")
+        except ResourceExistsError:
+            # Entity was created by another request in the meantime
+            logging.info("Visitor counter entity already exists")
+            pass
+    except Exception as e:
+        logging.exception(e)
 
 
 def increment_visitor_count(table_client: TableClient) -> int:
@@ -69,7 +82,7 @@ def increment_visitor_count(table_client: TableClient) -> int:
                 mode=UpdateMode.REPLACE,
                 etag=etag
             )
-            logging.info(f"Visitor count updated to %d", entity["visitors"])
+            logging.info(f"Visitor count updated to {entity["visitors"]}")
             return entity["visitors"]
 
         except ResourceModifiedError:
@@ -77,7 +90,8 @@ def increment_visitor_count(table_client: TableClient) -> int:
             logging.warning("Concurrency conflict detected, retrying...")
             continue
 
-    raise RuntimeError("Failed to update visitor count due to concurrency updates.")
+    raise RuntimeError("Failed to update visitor count: concurrency updates.")
+
 
 @app.route(route="visitor", methods=["POST"])
 def visitor(req: func.HttpRequest) -> func.HttpResponse:
@@ -97,7 +111,7 @@ def visitor(req: func.HttpRequest) -> func.HttpResponse:
         )
 
     except Exception as e:
-        logging.exception("Visitor counter failed")
+        logging.exception("Visitor counter failed", e)
         return func.HttpResponse(
             json.dumps({"error": "Internal server error"}),
             status_code=500
