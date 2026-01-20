@@ -1,20 +1,23 @@
 {
-  "version": "2.0",
-  "logging": {
-    "logLevel": {
-        "default": "Information",
-        "Function": "Information",
-        "Host": "Information"
-      },
-    "applicationInsights": {
-      "samplingSettings": {
-        "isEnabled": true,
-        "excludedTypes": "Request"
-      }
+    "version": "2.0",
+    "logging": {
+        "fileLoggingMode": "debugOnly",
+        "logLevel": {
+            "default": "Warning",
+            "Function": "Information",
+            "Host.Results": "Information",
+            "Host.Aggregator": "Information"
+            },
+        "applicationInsights": {
+        "samplingSettings": {
+            "isEnabled": true,
+            "maxTelemetryItemsPerSecond": 10,
+            "excludedTypes": "Request;Exception"
+            }
+        }
+    },
+    "extensionBundle": {
+        "id": "Microsoft.Azure.Functions.ExtensionBundle",
+        "version": "[4.*, 5.0.0)"
     }
-  },
-  "extensionBundle": {
-    "id": "Microsoft.Azure.Functions.ExtensionBundle",
-    "version": "[4.*, 5.0.0)"
-  }
 }
