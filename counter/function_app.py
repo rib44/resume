@@ -1,6 +1,7 @@
 import os
 import json
 import logging
+import time
 import azure.functions as func
 from azure.data.tables import TableClient, UpdateMode
 from azure.core.exceptions import (
@@ -40,6 +41,7 @@ def ensure_counter_exists(table_client: TableClient) -> None:
     """
     try:
         table_client.get_entity(PARTITION_KEY, ROW_KEY)
+        logging.info("Visitor counter entity exists")
     except ResourceNotFoundError:
         try:
             table_client.create_entity({
@@ -88,6 +90,7 @@ def increment_visitor_count(table_client: TableClient) -> int:
         except ResourceModifiedError:
             # another request updated the entity first, retry
             logging.warning("Concurrency conflict detected, retrying...")
+            time.sleep(2 ** UPDATE_RETRY)  # Exponential backoff
             continue
 
     raise RuntimeError("Failed to update visitor count: concurrency updates.")
@@ -103,6 +106,7 @@ def visitor(req: func.HttpRequest) -> func.HttpResponse:
         table_client = get_table_client()
         ensure_counter_exists(table_client)
         count = increment_visitor_count(table_client)
+        logging.info(f"Visitor count is now {count}")
 
         return func.HttpResponse(
             json.dumps({"visitors": count}),
