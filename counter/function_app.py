@@ -115,7 +115,7 @@ def visitor(req: func.HttpRequest) -> func.HttpResponse:
         )
 
     except Exception as e:
-        logging.exception(f"Visitor counter failed: %s", e)
+        logging.exception(f"Visitor counter failed: {e}")
         return func.HttpResponse(
             json.dumps({"error": "Internal server error"}),
             status_code=500
