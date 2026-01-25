@@ -15,7 +15,7 @@ from typing import cast
 TABLE_NAME = "visitorCount"
 PARTITION_KEY = "P1"
 ROW_KEY = "R1"
-UPDATE_RETRY = 5
+UPDATE_RETRY = 3
 
 CONNECTION_STRING = cast(str, os.getenv("CONNECTION_STRING"))
 
@@ -67,7 +67,7 @@ def increment_visitor_count(table_client: TableClient) -> int:
     :return: Updated visitor count
     :rtype: int
     """
-    for _ in range(UPDATE_RETRY):
+    for attempt in range(UPDATE_RETRY):
         try:
             entity = table_client.get_entity(
                 partition_key=PARTITION_KEY,
@@ -91,6 +91,7 @@ def increment_visitor_count(table_client: TableClient) -> int:
             # another request updated the entity first, retry
             logging.warning("Concurrency conflict detected, retrying...")
             time.sleep(2 ** UPDATE_RETRY)  # Exponential backoff
+            time.sleep(0.1 * (2 ** attempt))
             continue
 
     raise RuntimeError("Failed to update visitor count: concurrency updates.")
