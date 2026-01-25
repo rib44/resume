@@ -42,7 +42,7 @@ def mock_table_client():
 class TestVisitorFunction:
 
     @patch('function_app.TableClient.from_connection_string')
-    @patch('function_app.time.sleep')  # Mock sleep to avoid waiting during retries
+    @patch('function_app.time.sleep')  # To avoid waiting during retries
     def test_happy_path_increment(
         self,
         mock_sleep,
@@ -62,7 +62,7 @@ class TestVisitorFunction:
             "PartitionKey": "P1",
             "RowKey": "R1",
             "visitors": 10,
-            "etag": "W/\"datetime'2023'\""
+            "etag": "W/\"datetime'2026'\""
         }
 
         # Execute
@@ -78,7 +78,7 @@ class TestVisitorFunction:
         mock_table_client.update_entity.assert_called_once()
         call_kwargs = mock_table_client.update_entity.call_args.kwargs
         assert call_kwargs['mode'] == function_app.UpdateMode.REPLACE
-        assert call_kwargs['etag'] == "W/\"datetime'2023'\""
+        assert call_kwargs['etag'] == "W/\"datetime'2026'\""
 
     @patch('function_app.TableClient.from_connection_string')
     @patch('function_app.time.sleep')
@@ -90,7 +90,8 @@ class TestVisitorFunction:
         mock_table_client
     ):
         """
-        Test when the counter does not exist: it should be created and then incremented.
+        Test when the counter does not exist: it should be created and
+        then incremented.
         """
         mock_table_client_factory.return_value = mock_table_client
 
@@ -123,43 +124,52 @@ class TestVisitorFunction:
     @patch('function_app.TableClient.from_connection_string')
     @patch('function_app.time.sleep')
     def test_concurrency_conflict_and_retry(
-        self, mock_sleep,
+        self,
+        mock_sleep,
         mock_table_client_factory,
         mock_request,
         mock_table_client
     ):
-        """
-        Test Optimistic Concurrency:
-        1. First update attempt fails (ResourceModifiedError).
-        2. Function retries.
-        3. Second update succeeds.
-        """
         mock_table_client_factory.return_value = mock_table_client
 
-        # Always return the same entity when fetching
-        mock_entity = {
+        # --- 1. Prepare the entity data ---
+        base_entity = {
             "PartitionKey": "P1",
             "RowKey": "R1",
             "visitors": 5,
             "etag": "W/\"'5'\""
         }
-        mock_table_client.get_entity.return_value = mock_entity
 
-        # First update fails, second succeeds
-        mock_table_client.update_entity.side_effect = [
-            ResourceModifiedError("Conflict"),
-            None  # Success
+        # --- 2. Setup get_entity ---
+        # We need TWO items here because the loop runs twice:
+        # - Fetch 0 (Check if counter exists)
+        # - Fetch 1 (Initial)
+        # - Fetch 2 (After conflict/retry)
+        mock_table_client.get_entity.side_effect = [
+            base_entity.copy(),
+            base_entity.copy(),
+            base_entity.copy()
         ]
 
+        # --- 3. Setup update_entity ---
+        # We need TWO items here:
+        # - Attempt 1: Raise Conflict
+        # - Attempt 2: Return None (Success)
+        mock_table_client.update_entity.side_effect = [
+            ResourceModifiedError("Conflict"),
+            None
+        ]
+
+        # Execute
         response = function_app.visitor(mock_request)
 
+        # Assertions
         assert response.status_code == 200
         response_body = json.loads(response.get_body())
         assert response_body["visitors"] == 6
 
-        # Verify update was called twice (initial fail + retry)
+        # Verify interactions
         assert mock_table_client.update_entity.call_count == 2
-        # Verify sleep was called (backoff logic)
         mock_sleep.assert_called_once()
 
     @patch('function_app.TableClient.from_connection_string')
