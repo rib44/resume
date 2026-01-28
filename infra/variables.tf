@@ -12,3 +12,8 @@ variable "storage_account_name" {
   description = "Storage account name"
   type        = string
 }
+
+variable "cosmosdb_account_name" {
+  description = "Cosmos DB account name"
+  type        = string
+}
