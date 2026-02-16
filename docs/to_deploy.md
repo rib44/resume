@@ -1,6 +1,5 @@
 # Steps to deploy all the resources.
 
-<<<<<<< HEAD
 ### Deploy: Storage Account
 # TODO
 
@@ -17,9 +16,6 @@
     ```
 
 ### Deploy: Storage Container
-=======
-### Deploy Storage Container
->>>>>>> 9273250 (added steps to deploy function app)
 # TODO
 
 
@@ -49,11 +45,7 @@
         CONNECTION_STRING: "<cosmos_db_connection_string>"
     }
     ```
-<<<<<<< HEAD
 6. Set the `CORS` policy for the app to allow the below two URLs.
-=======
-6. Set the CORS policy for the app to allow the below two URLs.
->>>>>>> 9273250 (added steps to deploy function app)
 ```
 http://resume.mistiquer.work.gd
 https://resume.mistiquer.work.gd
