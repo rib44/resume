@@ -1,6 +1,9 @@
 # Steps to deploy all the resources.
 
-### Deploy Storage Container
+### Deploy: Storage Account
+# TODO
+
+### Deploy: Storage Container
 # TODO
 
 
