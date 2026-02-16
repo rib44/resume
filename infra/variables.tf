@@ -1,10 +1,6 @@
 variable "subsciption" {
   description = "Azure Subsciption"
-<<<<<<< HEAD
-  type        = string
-=======
   type = string
->>>>>>> 71912ef (made azure subsciption as a variable)
 }
 
 variable "resource_group_name" {
