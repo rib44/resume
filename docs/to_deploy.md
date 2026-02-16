@@ -1,8 +1,16 @@
 # Steps to deploy all the resources.
 
-### Deploy: Storage Account
-# TODO
+- [Steps to deploy all the resources.](#steps-to-deploy-all-the-resources)
+    - [Deploy: Resource Group](#deploy-resource-group)
+    - [Deploy: Storage Account](#deploy-storage-account)
+    - [Deploy: Cosmos DB Table API (Serverless Capacity)](#deploy-cosmos-db-table-api-serverless-capacity)
+- [TODO](#todo)
+    - [Deploy: Function App](#deploy-function-app)
 
+### Deploy: Resource Group
+1. Use the terraform file.
+
+### Deploy: Storage Account
 1. Create the storage account via Terraform.
 2. To upload files to the `$web` blob container. <br />
    `source`: [App Frontend](../app_frontend/) <br />
@@ -28,9 +36,6 @@
         --auth-mode login \
         --delete-destination true # BEWARE: deletes blobs in destination
     ```
-
-### Deploy: Storage Container
-# TODO
 
 
 ### Deploy: Cosmos DB Table API (Serverless Capacity)
@@ -59,7 +64,7 @@
         CONNECTION_STRING: "<cosmos_db_connection_string>"
     }
     ```
-6. Set the `CORS` policy for the app to allow the below two URLs.
+6. Set the CORS policy for the app to allow the below two URLs.
 ```
 http://resume.mistiquer.work.gd
 https://resume.mistiquer.work.gd
