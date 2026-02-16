@@ -4,14 +4,28 @@
 # TODO
 
 1. Create the storage account via Terraform.
-2. To upload files to the `$web` blob container.
+2. To upload files to the `$web` blob container. <br />
+   `source`: [App Frontend](../app_frontend/) <br />
+   `destination`: $web
     ```bash
-    # Run from the root folder
+    # Run from the infra folder
+    az storage blob upload-batch \
+        --destination '$web' \
+        --account-name $(terraform output -raw storage_account_name) \
+        --source ../app_frontend/ \
+        --pattern "**/*.{html,css,js}" \
+        --auth-mode login \
+        --overwrite
+    ```
+    **DO_NOT_USE the below**
+    ```bash
+    # az CLI in development for the below method
     az storage blob sync \
         --container '$web' \
         --account-name $(terraform output -raw storage_account_name) \
         --source ./app_frontend/ \
-        --exclude-pattern ".git*;*.tfstate" \
+        --exclude-pattern ".git*;*.tfstate;*.env" \
+        --auth-mode login \
         --delete-destination true # BEWARE: deletes blobs in destination
     ```
 
