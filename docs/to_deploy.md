@@ -3,6 +3,18 @@
 ### Deploy: Storage Account
 # TODO
 
+1. Create the storage account via Terraform.
+2. To upload files to the `$web` blob container.
+    ```bash
+    # Run from the root folder
+    az storage blob sync \
+        --container '$web' \
+        --account-name $(terraform output -raw storage_account_name) \
+        --source ./app_frontend/ \
+        --exclude-pattern ".git*;*.tfstate" \
+        --delete-destination true # BEWARE: deletes blobs in destination
+    ```
+
 ### Deploy: Storage Container
 # TODO
 
