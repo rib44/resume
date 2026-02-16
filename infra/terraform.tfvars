@@ -1,5 +1,5 @@
 subsciption           = "674e50c9-9a71-4e5b-9eeb-da6fc298edea"
 resource_group_name   = "rg-resume"
 location              = "centralindia"
-storage_account_name  = "stresume730"
+storage_account_name  = "stresume"
 cosmosdb_account_name = "cosmos-resumedb"
