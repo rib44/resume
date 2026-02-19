@@ -5,12 +5,12 @@ class ApiClient {
     async post(url) {
         const response = await fetch(url, {
             method: "POST",
-            headers: { "Content-Type": "application/json"}
+            headers: { "Content-Type": "application/json" }
         });
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        return  await response.json();
+        return await response.json();
     }
 }
 
@@ -29,5 +29,22 @@ class SessionTracker {
     }
 }
 
+class CounterUI {
+    constructor(elementID) {
+        this.elementID = elementID;
+    }
+
+    updateCount(count) {
+        const element = document.getElementById(this.elementID);
+        if (element) element.innerHTML = count;
+    }
+
+    showError() {
+        const element = document.getElementById(this.elementID);
+        if (element) element.innerHTML = "Error";
+    }
+}
+
 const apiClient = new ApiClient();
 const sessionTracker = new SessionTracker("resume_visited");
+const counterUI = new CounterUI("cnt")
