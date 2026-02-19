@@ -23,7 +23,7 @@ function getApiBaseUrl() {
 
     // Backend: Production
     // update below URL with actual Azure functions app URL
-    // eg., return 'https://YOUR_FUNCTION_APP.azurewebsites.net';
+    // eg., return 'https://YOUR_FUNCTION_APP.azurewebsites.net/api';
     return 'https://YOUR_FUNCTION_APP.azurewebsites.net';
 }
 
