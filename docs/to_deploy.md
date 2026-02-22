@@ -45,7 +45,7 @@
         CONNECTION_STRING: "<cosmos_db_connection_string>"
     }
     ```
-6. Set the CORS policy for the app to allow the below two URLs.
+6. Set the `CORS` policy for the app to allow the below two URLs.
 ```
 http://resume.mistiquer.work.gd
 https://resume.mistiquer.work.gd
