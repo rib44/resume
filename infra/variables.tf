@@ -22,3 +22,8 @@ variable "cosmosdb_account_name" {
   description = "Cosmos DB account name"
   type        = string
 }
+
+variable "function_app_name" {
+  description = "Function app name"
+  type        = string
+}
