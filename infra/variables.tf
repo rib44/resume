@@ -1,6 +1,6 @@
 variable "subsciption" {
   description = "Azure Subsciption"
-  type = string
+  type        = string
 }
 
 variable "resource_group_name" {
