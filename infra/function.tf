@@ -30,7 +30,7 @@ resource "azurerm_linux_function_app" "function_app" {
       python_version = "3.12"
     }
     cors {
-      allowed_origins     = ["http://resume.mistiquer.work.gd", "https://portal.azure.com", "https://resume.mistiquer.work.gd"]
+      allowed_origins     = ["https://portal.azure.com", "https://aryankr.is-a.dev"]
       support_credentials = false
     }
   }

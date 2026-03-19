@@ -10,8 +10,8 @@ resource "azurerm_storage_account" "storage_acc" {
 }
 
 # Static Website Configuration for Storage Account
-resource "azurerm_storage_account_static_website" "front-page" {
-  storage_account_id = azurerm_storage_account.storage_acc.id
-  index_document     = "index.html"
-  error_404_document = "404.html"
-}
+# resource "azurerm_storage_account_static_website" "front-page" {
+#   storage_account_id = azurerm_storage_account.storage_acc.id
+#   index_document     = "index.html"
+#   error_404_document = "404.html"
+# }
