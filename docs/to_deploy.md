@@ -52,7 +52,7 @@
     cd app_backend/counter
 
     # will use az cli login
-    func azure functionapp publish <YourFunctionAppName>
+    func azure functionapp publish <YourFunctionAppName> --python
     ```
 
 4. Set the API URL [conig.js](/app_frontend/config/config.js) (line 27) with the function app URL.
