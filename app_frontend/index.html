@@ -1,155 +1,735 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aryan Kumar's Resume - Cloud Developer with 1+ years of experience in app migration and Microsoft Azure.">
-    <meta name="author" content="Aryan Kumar">
-    <meta name="keywords" content="resume, cloud developer, azure, migration, development, python, flask, django">
-    <link type="text/css" rel="stylesheet" href="styles/styles.css" />
-    <script type="module" src="scripts/index.js"></script>
-    <title>Resume | Aryan Kumar - Cloud Developer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aryan Kumar - Systems Engineer & Backend Developer specializing in cloud migrations, Azure, and scalable backend solutions.">
+  <meta name="author" content="Aryan Kumar">
+  <title>Aryan Kumar | Systems Engineer & Backend Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- In <head> -->
+  <link rel="preconnect" href="https://unpkg.com">
+
 </head>
 
-<body>
-    <div id="header">
-        <p id="name">Aryan Kumar</p>
-        <a href="mailto:aryankr730@gmail.com" target="_blank">
-            <p id="email">Email: aryankr730@gmail.com</p>
+<body class="bg-gray-950 text-gray-100 font-sans antialiased transition-colors duration-300">
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-950/80 backdrop-blur-lg border-b border-gray-800">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="text-xl font-bold gradient-text">AK</a>
+
+      <!-- Nav Links (Desktop) -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#about" class="text-sm text-gray-400 hover:text-white transition-colors">About</a>
+        <a href="#experience" class="text-sm text-gray-400 hover:text-white transition-colors">Experience</a>
+        <a href="#projects" class="text-sm text-gray-400 hover:text-white transition-colors">Projects</a>
+        <a href="#education" class="text-sm text-gray-400 hover:text-white transition-colors">Education</a>
+        <a href="#contact" class="text-sm text-gray-400 hover:text-white transition-colors">Contact</a>
+      </div>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-3">
+        <!-- Download Resume Button -->
+        <a href="https://drive.google.com/file/d/1AHeAyV_Qz6GAweCGjt-kTYkJWf9aQFAV/view?usp=drive_link" target="_blank"
+           class="hidden sm:flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-primary-600 hover:bg-primary-500 rounded-lg transition-colors">
+          <i data-lucide="download" class="w-4 h-4"></i>
+          Resume
         </a>
-    </div>
-    <div class="left">
-    </div>
-    <div class="right">
-        <h3>CV Highlights</h3>
-        <p>
-            <ul>
-                <li>Worked on several technologies by creating multiple projects understanding the working of differnt systems.</li>
-                <li>Have 1+ year of experience in app migration and working knowledge of Microsoft Azure to perform the designated tasks.</li>
-                <li>Good communication skills, presentation skills, attitude towards leadership, conflict resolution and negotiation and a very good team worker.</li>
-            </ul>
-        </p>
-        <h3>Professional Experience</h3>
-        <h4 id="company-name">Tata Consultancy Services</h4>
-        <p id="job-title">
-            <strong>Cloud Developer</strong>
-        </p>
-        <p id="job-responsibilities">Job Responsbilities</p>
-        <p>
-        <ul>
-            <li>Performing end-to-end migration of apps from on-prem to cloud.</li>
-            <li>Collaboration with different teams to recognize the requirements, current limitations and system
-                dependencies.</li>
-            <li>Remediating bottlenecks and performance issues on cloud application.</li>
-            <li>Looking at various horizons to approach a problem, to solve efficiently.</li>
-        </ul>
-        </p>
-        <p id="job-title"><strong>Project Intern</strong></p>
-        <p id="job-responsibilities">Job Responsbilities</p>
-        <p>
-        <ul>
-            <li>To create a full-fledged applicaiton including both frontend and backend using Django framwork.</li>
-            <li>Went through projects on Microsoft Azure, ChatGPT.</li>
-        </ul>
-        </p>
-        <h4 id="company-name">Edutech India</h4>
-        <p id="job-title"><strong>STEM Intern</strong></p>
-        <p id="job-responsibilities">Job Responsbilities</p>
-        <p>
-        <ul>
-            <li>To design, assemble and program a human-sized robot named "Mr. Robot II".</li>
-            <li>Worked on several STEM related learning projects for K-12 Students.</li>
 
-        </ul>
-        </p>
-        <h3>Skills</h3>
-        <p>
-        <ul>
-            <li>
-                <span id="course-name">Technical Skills:</span> Python, Docker, C++, C, SQL, HTML, CSS
-            </li>
-            <li>
-                <span id="course-name">Tools / Frameworks:</span> Django, Flask, Git, Numpy, Pandas, SQLite, phpMyAdmin,
-                Xilinx Vivado
-            </li>
-            <li>
-                <span id="course-name">Platforms:</span> Linux, Windows, Arduino, FPGA
-            </li>
-            <li>
-                <span id="course-name">Soft Skills:</span> Event Management, Leadership, Public Speaking
-            </li>
-        </ul>
-        </p>
-        <h3>Education</h3>Qualifications
-        <table>
-            <tr id="heading">
-                <td>Qualification</td>
-                <td>Board</td>
-                <td>CGPA / Percentage</td>
-                <td>Year</td>
-            </tr>
-            <tr>
-                <td>B.E. in Electronics and Communication Engineering</td>
-                <td>Nitte Meenakshi Institute of Technology</td>
-                <td>9.18 CGPA</td>
-                <td>2023</td>
-            </tr>
-            <tr>
-                <td>Senior Secondary (10 + 2) - PCM</td>
-                <td>C.B.S.E</td>
-                <td>87.0 %</td>
-                <td>2019</td>
-            </tr>
-            <tr>
-                <td>Secondary (10<sup>th</sup>)</td>
-                <td>C.B.S.E</td>
-                <td>10 CGPA</td>
-                <td>2017</td>
-            </tr>
-        </table>
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="p-2 text-gray-400 hover:text-white transition-colors" aria-label="Toggle theme">
+          <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+          <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+        </button>
 
-        <h3>Publications</h3>
-        <p><strong>IEEE: Handwritten Digit Detectiona dn Prototyping on Field Programmable Gate Array (FPGA): </strong>
-        </p>
-        <div>
-            <ul>
-                <li>Training of Extreme Learning Machine (ELM, a tpe of Neural Network) for detection of handwritten
-                    images.</li>
-                <li>The model is first trained on a dataset on MATLAB, after which the same weights and biases are used
-                    to implement it on the hardware.</li>
-                <li>Performing the hardware simulation of the model using Xilinx Vivado and finally implementing it on
-                    an FPGA.</li>
-            </ul>
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-toggle" class="md:hidden p-2 text-gray-400 hover:text-white">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-900 border-t border-gray-800">
+      <div class="px-6 py-4 flex flex-col gap-4">
+        <a href="#about" class="text-gray-300 hover:text-white">About</a>
+        <a href="#experience" class="text-gray-300 hover:text-white">Experience</a>
+        <a href="#projects" class="text-gray-300 hover:text-white">Projects</a>
+        <a href="#education" class="text-gray-300 hover:text-white">Education</a>
+        <a href="#contact" class="text-gray-300 hover:text-white">Contact</a>
+        <a href="https://drive.google.com/file/d/1AHeAyV_Qz6GAweCGjt-kTYkJWf9aQFAV/view?usp=drive_link" target="_blank"
+           class="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-primary-600 rounded-lg w-fit">
+          <i data-lucide="download" class="w-4 h-4"></i>
+          Download Resume
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="min-h-screen flex items-center pt-16">
+    <div class="max-w-5xl mx-auto px-6 py-20">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <!-- Content -->
+        <div class="flex-1 text-center md:text-left">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-primary-500/10 border border-primary-500/30 rounded-full text-sm text-primary-400 mb-6">
+            <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            Available for opportunities
+          </div>
+
+          <!-- Title -->
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+            Hi, I'm <span class="gradient-text">Aryan Kumar</span>
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="text-xl md:text-2xl text-gray-400 mb-6">
+            Systems Engineer & Backend Developer
+          </p>
+
+          <!-- Description -->
+          <p class="text-gray-400 text-lg mb-8 max-w-xl">
+            I build scalable cloud solutions and optimize backend systems.
+            Currently at <span class="text-white font-medium">Tata Consultancy Services</span>,
+            specializing in Azure cloud migrations and high-performance applications.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap gap-4 justify-center md:justify-start mb-8">
+            <a href="#projects"
+               class="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-500 text-white font-medium rounded-lg transition-all hover:shadow-lg hover:shadow-primary-500/25">
+              View My Work
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a href="#contact"
+               class="inline-flex items-center gap-2 px-6 py-3 border border-gray-700 hover:border-gray-500 text-gray-300 font-medium rounded-lg transition-colors">
+              Get In Touch
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="flex gap-4 justify-center md:justify-start">
+            <a href="mailto:aryankr730@gmail.com"
+               class="p-3 bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-lg text-gray-400 hover:text-white transition-all">
+              <i data-lucide="mail" class="w-5 h-5"></i>
+            </a>
+            <a href="https://github.com/rib44" target="_blank" rel="noopener noreferrer"
+               class="p-3 bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-lg text-gray-400 hover:text-white transition-all">
+              <i data-lucide="github" class="w-5 h-5"></i>
+            </a>
+            <a href="https://linkedin.com/in/aryankr" target="_blank" rel="noopener noreferrer"
+               class="p-3 bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-lg text-gray-400 hover:text-white transition-all">
+              <i data-lucide="linkedin" class="w-5 h-5"></i>
+            </a>
+            <a href="tel:+918987315385"
+               class="p-3 bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-lg text-gray-400 hover:text-white transition-all">
+              <i data-lucide="phone" class="w-5 h-5"></i>
+            </a>
+          </div>
         </div>
 
-        <h3>Other Information</h3>
-        <p>
-        <ul>
-            <li>
-                <span id="course-name">Expected Salary: </span>As per company standards
-            </li>
-            <li>
-                <span id="course-name">Area of Interest: </span>Software Development, Programming, Start-ups, Coding,
-                App Development
-            </li>
-            <li>
-                <span id="course-name">Joining Date: </span> After 90 days
-            </li>
-        </ul>
-        </p>
-        <h3>Declaration</h3>
-        <p>
-            I hereby declare that the details furnished above are true and correct to the best of my knowledge and
-            belief.</p>
+        <!-- Visual Element -->
+        <div class="hidden md:block flex-shrink-0">
+          <div class="relative w-80 h-80">
+            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 to-accent-400 blur-2xl opacity-20 animate-pulse"></div>
+            <div class="relative bg-gray-900 border border-gray-700 rounded-xl overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-3 bg-gray-800 border-b border-gray-700">
+                <span class="w-3 h-3 bg-red-500 rounded-full"></span>
+                <span class="w-3 h-3 bg-yellow-500 rounded-full"></span>
+                <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+                <span class="ml-2 text-sm text-gray-400">terminal</span>
+              </div>
+              <div class="p-4 font-mono text-sm">
+                <p class="text-gray-400"><span class="text-primary-400">$</span> whoami</p>
+                <p class="text-accent-400 mb-3">aryan_kumar</p>
+                <p class="text-gray-400"><span class="text-primary-400">$</span> cat skills.txt</p>
+                <p class="text-accent-400">Python, Django, FastAPI</p>
+                <p class="text-accent-400">Azure, Docker, Terraform</p>
+                <p class="text-gray-400 mt-3"><span class="text-primary-400">$</span> <span class="animate-pulse">_</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="footer">
+  </section>
+
+  <!-- ==================== ABOUT SECTION ==================== -->
+  <section id="about" class="py-20 bg-gray-900/50">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="reveal">
+        <span class="text-primary-400 font-mono text-sm">01.</span>
+        <h2 class="text-3xl font-bold mt-2 mb-8">About Me</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-2 reveal">
+          <p class="text-gray-400 text-lg leading-relaxed mb-4">
+            I'm a <span class="text-white font-medium">Systems Engineer</span> and
+            <span class="text-white font-medium">Backend Developer</span> with a passion for building
+            efficient, scalable systems. With hands-on experience in cloud migrations and backend development,
+            I specialize in transforming legacy applications into modern cloud-native solutions.
+          </p>
+          <p class="text-gray-400 text-lg leading-relaxed mb-4">
+            Currently at <span class="text-white font-medium">Tata Consultancy Services</span>, I manage the
+            full lifecycle of on-premise to Azure cloud migrations—from requirements gathering through production
+            support. I've optimized SQL queries improving data retrieval by <span class="text-primary-400 font-medium">23%</span>
+            and reduced post-deployment defects through structured code reviews and automated testing.
+          </p>
+          <p class="text-gray-400 text-lg leading-relaxed">
+            When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects,
+            and staying updated with the latest in cloud architecture and DevOps practices.
+          </p>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 gap-4 reveal">
+          <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-4 text-center hover:border-primary-500 transition-colors">
+            <p class="text-2xl font-bold gradient-text">2.5+</p>
+            <p class="text-sm text-gray-400">Years Exp.</p>
+          </div>
+          <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-4 text-center hover:border-primary-500 transition-colors">
+            <p class="text-2xl font-bold gradient-text">23%</p>
+            <p class="text-sm text-gray-400">Optimization</p>
+          </div>
+          <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-4 text-center hover:border-primary-500 transition-colors">
+            <p class="text-2xl font-bold gradient-text">3</p>
+            <p class="text-sm text-gray-400">Awards</p>
+          </div>
+          <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-4 text-center hover:border-primary-500 transition-colors">
+            <p class="text-2xl font-bold gradient-text">9.18</p>
+            <p class="text-sm text-gray-400">CGPA</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SKILLS SECTION ==================== -->
+  <section class="py-20">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="reveal">
+        <span class="text-primary-400 font-mono text-sm">02.</span>
+        <h2 class="text-3xl font-bold mt-2 mb-8">Skills & Technologies</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Languages -->
+        <div class="reveal bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-primary-500 transition-colors">
+          <div class="w-12 h-12 bg-primary-500/10 rounded-lg flex items-center justify-center mb-4">
+            <i data-lucide="code" class="w-6 h-6 text-primary-400"></i>
+          </div>
+          <h3 class="font-semibold mb-3">Languages</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-1 text-xs bg-gray-800 border border-gray-700 rounded text-gray-300">Python</span>
+            <span class="px-2 py-1 text-xs bg-gray-800 border border-gray-700 rounded text-gray-300">C++</span>
+            <span class="px-2 py-1 text-xs bg-gray-800 border border-gray-700 rounded text-gray-300">Bash</span>
+            <span class="px-2 py-1 text-xs bg-gray-800 border border-gray-700 rounded text-gray-300">SQL</span>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="reveal bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-primary-500 transition-colors">
+          <div class="w-12 h-12 bg-primary-500/10 rounded-lg flex items-center justify-center mb-4">
+            <i data-lucide="server" class="w-6 h-6 text-primary-400"></i>
+          </div>
+          <h3 class="font-semibold mb-3">Backend</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-1 text-xs bg-gray-800 border border-gray-700 rounded text-gray-300">Django</span>
+            <span class="px-2 py-1 text-xs bg-gray-800 border border-gray-700 rounded text-gray-300">FastAPI</span>
+            <span class="px-2 py-1 text-xs bg-gray-800 border border-gray-700 rounded text-gray-300">REST APIs</span>
+            <span class="px-2 py-1 text-xs bg-gray-800 border border-gray-700 rounded text-gray-300">Flask</span>
+          </div>
+        </div>
+
+        <!-- Cloud & DevOps -->
+        <div class="reveal bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-primary-500 transition-colors">
+          <div class="w-12 h-12 bg-primary-500/10 rounded-lg flex items-center justify-center mb-4">
+            <i data-lucide="cloud" class="w-6 h-6 text-primary-400"></i>
+          </div>
+          <h3 class="font-semibold mb-3">Cloud & DevOps</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-1 text-xs bg-gray-800 border border-gray-700 rounded text-gray-300">Azure</span>
+            <span class="px-2 py-1 text-xs bg-gray-800 border border-gray-700 rounded text-gray-300">Docker</span>
+            <span class="px-2 py-1 text-xs bg-gray-800 border border-gray-700 rounded text-gray-300">Terraform</span>
+            <span class="px-2 py-1 text-xs bg-gray-800 border border-gray-700 rounded text-gray-300">GitHub Actions</span>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="reveal bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-primary-500 transition-colors">
+          <div class="w-12 h-12 bg-primary-500/10 rounded-lg flex items-center justify-center mb-4">
+            <i data-lucide="database" class="w-6 h-6 text-primary-400"></i>
+          </div>
+          <h3 class="font-semibold mb-3">Databases</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-1 text-xs bg-gray-800 border border-gray-700 rounded text-gray-300">PostgreSQL</span>
+            <span class="px-2 py-1 text-xs bg-gray-800 border border-gray-700 rounded text-gray-300">CosmosDB</span>
+            <span class="px-2 py-1 text-xs bg-gray-800 border border-gray-700 rounded text-gray-300">MySQL</span>
+            <span class="px-2 py-1 text-xs bg-gray-800 border border-gray-700 rounded text-gray-300">SQLite</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EXPERIENCE SECTION ==================== -->
+  <section id="experience" class="py-20 bg-gray-900/50">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="reveal">
+        <span class="text-primary-400 font-mono text-sm">03.</span>
+        <h2 class="text-3xl font-bold mt-2 mb-8">Professional Experience</h2>
+      </div>
+
+      <!-- TCS -->
+      <div class="reveal bg-gray-900 border border-gray-800 rounded-xl p-6 mb-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-gray-800">
+          <div>
+            <h3 class="text-xl font-bold">Tata Consultancy Services</h3>
+            <p class="text-gray-400 flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4"></i>
+              Bengaluru, India
+            </p>
+          </div>
+          <span class="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-lg">Aug 2023 - Present</span>
+        </div>
+
+        <!-- Systems Engineer -->
+        <div class="mb-6">
+          <div class="flex items-center gap-3 mb-3">
+            <h4 class="font-semibold text-primary-400">Systems Engineer</h4>
+            <span class="text-xs px-2 py-0.5 bg-green-500/20 text-green-400 rounded">Current</span>
+          </div>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-start gap-2">
+              <i data-lucide="chevron-right" class="w-4 h-4 text-primary-400 mt-1 flex-shrink-0"></i>
+              Managed the full lifecycle of on-prem to cloud migrations, from requirements gathering through final support
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="chevron-right" class="w-4 h-4 text-primary-400 mt-1 flex-shrink-0"></i>
+              Identified and remediated critical performance issues to optimize migrated application's response times
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="chevron-right" class="w-4 h-4 text-primary-400 mt-1 flex-shrink-0"></i>
+              Liaised with stakeholders to resolve interoperability issues between legacy and cloud applications
+            </li>
+          </ul>
+        </div>
+
+        <!-- Backend Developer -->
+        <div class="mb-6">
+          <div class="flex items-center gap-3 mb-3">
+            <h4 class="font-semibold text-primary-400">Backend Developer</h4>
+            <span class="text-xs text-gray-500">Aug 2023 - Jun 2024</span>
+          </div>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-start gap-2">
+              <i data-lucide="chevron-right" class="w-4 h-4 text-primary-400 mt-1 flex-shrink-0"></i>
+              Implemented scalable backend solutions, optimizing SQL queries, improving data retrieval efficiency by <span class="text-white font-medium">23%</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="chevron-right" class="w-4 h-4 text-primary-400 mt-1 flex-shrink-0"></i>
+              Reduced post-deployment defects by implementing structured code reviews and automated unit testing
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="chevron-right" class="w-4 h-4 text-primary-400 mt-1 flex-shrink-0"></i>
+              Collaborated with cross-functional teams to deliver high-quality software modules and patches
+            </li>
+          </ul>
+        </div>
+
+        <!-- Project Intern -->
+        <div>
+          <div class="flex items-center gap-3 mb-3">
+            <h4 class="font-semibold text-primary-400">Project Intern</h4>
+            <span class="text-xs text-gray-500">Feb 2023 - May 2023</span>
+          </div>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-start gap-2">
+              <i data-lucide="chevron-right" class="w-4 h-4 text-primary-400 mt-1 flex-shrink-0"></i>
+              Developed a full-stack application using the Django framework
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="chevron-right" class="w-4 h-4 text-primary-400 mt-1 flex-shrink-0"></i>
+              Upskilled in cloud computing and generative AI on Microsoft Azure and ChatGPT
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Edutech India -->
+      <div class="reveal bg-gray-900 border border-gray-800 rounded-xl p-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-gray-800">
+          <div>
+            <h3 class="text-xl font-bold">Edutech India</h3>
+            <p class="text-gray-400 flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4"></i>
+              Bengaluru, India
+            </p>
+          </div>
+          <span class="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-lg">Aug 2022 - Oct 2022</span>
+        </div>
 
         <div>
-            <p class="page-counter">The number of visitors is : <span id="cnt">0</span></p>
+          <div class="flex items-center gap-3 mb-3">
+            <h4 class="font-semibold text-primary-400">STEM Intern</h4>
+          </div>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-start gap-2">
+              <i data-lucide="chevron-right" class="w-4 h-4 text-primary-400 mt-1 flex-shrink-0"></i>
+              Designed, assembled and programmed a human-sized robot named "Mr. Robot II"
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="chevron-right" class="w-4 h-4 text-primary-400 mt-1 flex-shrink-0"></i>
+              Developed several STEM-related learning projects for K-12 students
+            </li>
+          </ul>
         </div>
+      </div>
     </div>
+  </section>
 
+  <!-- ==================== PROJECTS SECTION ==================== -->
+  <section id="projects" class="py-20">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="reveal">
+        <span class="text-primary-400 font-mono text-sm">04.</span>
+        <h2 class="text-3xl font-bold mt-2 mb-8">Featured Projects</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Cloud Resume Challenge -->
+        <div class="reveal bg-gray-900 border border-gray-800 rounded-xl p-6 flex flex-col hover:border-primary-500 transition-colors">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 bg-primary-500/10 rounded-lg flex items-center justify-center">
+              <i data-lucide="cloud" class="w-6 h-6 text-primary-400"></i>
+            </div>
+            <a href="https://github.com/rib44/resume" target="_blank" rel="noopener noreferrer"
+               class="text-gray-400 hover:text-white transition-colors">
+              <i data-lucide="github" class="w-5 h-5"></i>
+            </a>
+          </div>
+          <h3 class="text-lg font-semibold mb-1">Cloud Resume Challenge</h3>
+          <p class="text-sm text-primary-400 mb-4">Azure-powered serverless resume</p>
+          <ul class="space-y-2 text-gray-400 text-sm flex-1 mb-4">
+            <li class="flex items-start gap-2">
+              <i data-lucide="chevron-right" class="w-3 h-3 text-primary-400 mt-1.5 flex-shrink-0"></i>
+              Serverless resume with Azure Storage, Functions, and Cosmos DB
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="chevron-right" class="w-3 h-3 text-primary-400 mt-1.5 flex-shrink-0"></i>
+              Etag-based optimistic concurrency control
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="chevron-right" class="w-3 h-3 text-primary-400 mt-1.5 flex-shrink-0"></i>
+              Bot filtering for accurate analytics
+            </li>
+          </ul>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-1 text-xs bg-gray-800 rounded text-gray-400">Azure</span>
+            <span class="px-2 py-1 text-xs bg-gray-800 rounded text-gray-400">Terraform</span>
+            <span class="px-2 py-1 text-xs bg-gray-800 rounded text-gray-400">CosmosDB</span>
+          </div>
+        </div>
+
+        <!-- Recipe REST API -->
+        <div class="reveal bg-gray-900 border border-gray-800 rounded-xl p-6 flex flex-col hover:border-primary-500 transition-colors">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 bg-primary-500/10 rounded-lg flex items-center justify-center">
+              <i data-lucide="chef-hat" class="w-6 h-6 text-primary-400"></i>
+            </div>
+            <a href="https://github.com/rib44/recipe-api" target="_blank" rel="noopener noreferrer"
+               class="text-gray-400 hover:text-white transition-colors">
+              <i data-lucide="github" class="w-5 h-5"></i>
+            </a>
+          </div>
+          <h3 class="text-lg font-semibold mb-1">Recipe REST API</h3>
+          <p class="text-sm text-primary-400 mb-4">Full-featured Django API</p>
+          <ul class="space-y-2 text-gray-400 text-sm flex-1 mb-4">
+            <li class="flex items-start gap-2">
+              <i data-lucide="chevron-right" class="w-3 h-3 text-primary-400 mt-1.5 flex-shrink-0"></i>
+              Django REST API with auth and image uploads
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="chevron-right" class="w-3 h-3 text-primary-400 mt-1.5 flex-shrink-0"></i>
+              Docker containerization & GitHub Actions CI
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="chevron-right" class="w-3 h-3 text-primary-400 mt-1.5 flex-shrink-0"></i>
+              Test Driven Development (TDD) approach
+            </li>
+          </ul>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-1 text-xs bg-gray-800 rounded text-gray-400">Django</span>
+            <span class="px-2 py-1 text-xs bg-gray-800 rounded text-gray-400">Docker</span>
+            <span class="px-2 py-1 text-xs bg-gray-800 rounded text-gray-400">TDD</span>
+          </div>
+        </div>
+
+        <!-- Stocks Portfolio -->
+        <div class="reveal bg-gray-900 border border-gray-800 rounded-xl p-6 flex flex-col hover:border-primary-500 transition-colors">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 bg-primary-500/10 rounded-lg flex items-center justify-center">
+              <i data-lucide="trending-up" class="w-6 h-6 text-primary-400"></i>
+            </div>
+            <a href="https://github.com/rib44/stocks-portfolio" target="_blank" rel="noopener noreferrer"
+               class="text-gray-400 hover:text-white transition-colors">
+              <i data-lucide="github" class="w-5 h-5"></i>
+            </a>
+          </div>
+          <h3 class="text-lg font-semibold mb-1">Stocks Portfolio</h3>
+          <p class="text-sm text-primary-400 mb-4">Real-time trading simulation</p>
+          <ul class="space-y-2 text-gray-400 text-sm flex-1 mb-4">
+            <li class="flex items-start gap-2">
+              <i data-lucide="chevron-right" class="w-3 h-3 text-primary-400 mt-1.5 flex-shrink-0"></i>
+              Flask web app for stock trading simulation
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="chevron-right" class="w-3 h-3 text-primary-400 mt-1.5 flex-shrink-0"></i>
+              Real-time stock prices via IEX API
+            </li>
+          </ul>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-1 text-xs bg-gray-800 rounded text-gray-400">Flask</span>
+            <span class="px-2 py-1 text-xs bg-gray-800 rounded text-gray-400">Python</span>
+            <span class="px-2 py-1 text-xs bg-gray-800 rounded text-gray-400">REST API</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EDUCATION SECTION ==================== -->
+  <section id="education" class="py-20 bg-gray-900/50">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="reveal">
+        <span class="text-primary-400 font-mono text-sm">05.</span>
+        <h2 class="text-3xl font-bold mt-2 mb-8">Education</h2>
+      </div>
+
+      <div class="space-y-6">
+        <!-- B.E. -->
+        <div class="reveal bg-gray-900 border border-gray-800 rounded-xl p-6 flex flex-col md:flex-row gap-6 hover:border-primary-500 transition-colors">
+          <div class="w-14 h-14 bg-primary-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i data-lucide="graduation-cap" class="w-7 h-7 text-primary-400"></i>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold">Bachelor of Engineering</h3>
+            <p class="text-primary-400 text-sm mb-1">Electronics and Communication Engineering</p>
+            <p class="text-gray-400 text-sm mb-3">Nitte Meenakshi Institute of Technology, Bengaluru</p>
+            <div class="flex flex-wrap items-center gap-4 text-sm">
+              <span class="flex items-center gap-1 text-primary-400">
+                <i data-lucide="star" class="w-4 h-4"></i>
+                CGPA: 9.18
+              </span>
+              <span class="text-gray-500">Aug 2019 - Aug 2023</span>
+            </div>
+            <p class="text-gray-500 text-sm mt-2"><strong class="text-gray-400">Courses:</strong> Computer Networks, Data Structures, Databases</p>
+          </div>
+        </div>
+
+        <!-- 12th -->
+        <div class="reveal bg-gray-900 border border-gray-800 rounded-xl p-6 flex flex-col md:flex-row gap-6 hover:border-primary-500 transition-colors">
+          <div class="w-14 h-14 bg-accent-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i data-lucide="book-open" class="w-7 h-7 text-accent-400"></i>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold">Senior Secondary (10+2)</h3>
+            <p class="text-accent-400 text-sm mb-1">PCM Stream</p>
+            <p class="text-gray-400 text-sm mb-3">Infant Jesus School, Patna</p>
+            <div class="flex flex-wrap items-center gap-4 text-sm">
+              <span class="flex items-center gap-1 text-primary-400">
+                <i data-lucide="star" class="w-4 h-4"></i>
+                87.0%
+              </span>
+              <span class="text-gray-500">May 2019</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10th -->
+        <div class="reveal bg-gray-900 border border-gray-800 rounded-xl p-6 flex flex-col md:flex-row gap-6 hover:border-primary-500 transition-colors">
+          <div class="w-14 h-14 bg-accent-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i data-lucide="book-open" class="w-7 h-7 text-accent-400"></i>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold">Secondary (10th)</h3>
+            <p class="text-gray-400 text-sm mb-3">Infant Jesus School, Patna</p>
+            <div class="flex flex-wrap items-center gap-4 text-sm">
+              <span class="flex items-center gap-1 text-primary-400">
+                <i data-lucide="star" class="w-4 h-4"></i>
+                CGPA: 10.0
+              </span>
+              <span class="text-gray-500">Jun 2017</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== AWARDS SECTION ==================== -->
+  <section class="py-20">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="reveal">
+        <span class="text-primary-400 font-mono text-sm">06.</span>
+        <h2 class="text-3xl font-bold mt-2 mb-8">Honors & Awards</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="reveal bg-gray-900 border border-gray-800 rounded-xl p-6 flex gap-4 hover:border-primary-500 transition-colors">
+          <div class="w-12 h-12 bg-yellow-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i data-lucide="award" class="w-6 h-6 text-yellow-500"></i>
+          </div>
+          <div>
+            <p class="text-xs text-gray-500 font-mono mb-1">Jan 2026</p>
+            <h4 class="font-semibold mb-1">Distinguished Contributor Award</h4>
+            <p class="text-sm text-gray-400">Tata Consultancy Services</p>
+          </div>
+        </div>
+
+        <div class="reveal bg-gray-900 border border-gray-800 rounded-xl p-6 flex gap-4 hover:border-primary-500 transition-colors">
+          <div class="w-12 h-12 bg-yellow-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i data-lucide="award" class="w-6 h-6 text-yellow-500"></i>
+          </div>
+          <div>
+            <p class="text-xs text-gray-500 font-mono mb-1">Nov 2025</p>
+            <h4 class="font-semibold mb-1">TCS AI Idea Igniter Award</h4>
+            <p class="text-sm text-gray-400">Tata Consultancy Services</p>
+          </div>
+        </div>
+
+        <div class="reveal bg-gray-900 border border-gray-800 rounded-xl p-6 flex gap-4 hover:border-primary-500 transition-colors">
+          <div class="w-12 h-12 bg-yellow-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i data-lucide="award" class="w-6 h-6 text-yellow-500"></i>
+          </div>
+          <div>
+            <p class="text-xs text-gray-500 font-mono mb-1">Jun 2024</p>
+            <h4 class="font-semibold mb-1">Client Leadership Award</h4>
+            <p class="text-sm text-gray-400">Tata Consultancy Services</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PUBLICATIONS SECTION ==================== -->
+  <section class="py-20 bg-gray-900/50">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="reveal">
+        <span class="text-primary-400 font-mono text-sm">07.</span>
+        <h2 class="text-3xl font-bold mt-2 mb-8">Publications</h2>
+      </div>
+
+      <div class="reveal bg-gray-900 border border-gray-800 rounded-xl p-6 relative overflow-hidden hover:border-primary-500 transition-colors">
+        <span class="absolute top-6 right-6 px-2 py-1 bg-amber-500/20 text-amber-400 text-xs font-bold rounded">IEEE</span>
+        <h3 class="text-lg font-semibold pr-16 mb-4">Handwritten Digit Detection and Prototyping on Field Programmable Gate Array (FPGA)</h3>
+        <ul class="space-y-2 text-gray-400">
+          <li class="flex items-start gap-2">
+            <i data-lucide="chevron-right" class="w-4 h-4 text-primary-400 mt-1 flex-shrink-0"></i>
+            Trained an Extreme Learning Machine (Neural Network) for detection of handwritten images
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="chevron-right" class="w-4 h-4 text-primary-400 mt-1 flex-shrink-0"></i>
+            Weights and biases calculation performed on Matlab, simulated on FPGA board
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="chevron-right" class="w-4 h-4 text-primary-400 mt-1 flex-shrink-0"></i>
+            Hardware simulation using Xilinx Vivado, deployed on FPGA hardware
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT SECTION ==================== -->
+  <section id="contact" class="py-20">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="reveal text-center mb-12">
+        <span class="text-primary-400 font-mono text-sm">08.</span>
+        <h2 class="text-3xl font-bold mt-2 mb-4">Get In Touch</h2>
+        <p class="text-gray-400 max-w-xl mx-auto">
+          I'm currently open to new opportunities and interesting projects.
+          Whether you have a question or just want to say hi, feel free to reach out!
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 reveal">
+        <a href="mailto:aryankr730@gmail.com"
+           class="bg-gray-900 border border-gray-800 rounded-xl p-6 text-center hover:border-primary-500 transition-colors group">
+          <div class="w-12 h-12 bg-primary-500/10 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-primary-500/20 transition-colors">
+            <i data-lucide="mail" class="w-6 h-6 text-primary-400"></i>
+          </div>
+          <p class="font-medium mb-1">Email</p>
+          <p class="text-sm text-gray-400">aryankr730@gmail.com</p>
+        </a>
+
+        <a href="https://github.com/rib44" target="_blank" rel="noopener noreferrer"
+           class="bg-gray-900 border border-gray-800 rounded-xl p-6 text-center hover:border-primary-500 transition-colors group">
+          <div class="w-12 h-12 bg-primary-500/10 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-primary-500/20 transition-colors">
+            <i data-lucide="github" class="w-6 h-6 text-primary-400"></i>
+          </div>
+          <p class="font-medium mb-1">GitHub</p>
+          <p class="text-sm text-gray-400">@rib44</p>
+        </a>
+
+        <a href="https://linkedin.com/in/aryankr" target="_blank" rel="noopener noreferrer"
+           class="bg-gray-900 border border-gray-800 rounded-xl p-6 text-center hover:border-primary-500 transition-colors group">
+          <div class="w-12 h-12 bg-primary-500/10 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-primary-500/20 transition-colors">
+            <i data-lucide="linkedin" class="w-6 h-6 text-primary-400"></i>
+          </div>
+          <p class="font-medium mb-1">LinkedIn</p>
+          <p class="text-sm text-gray-400">/in/aryankr</p>
+        </a>
+
+        <a href="tel:+918987315385"
+           class="bg-gray-900 border border-gray-800 rounded-xl p-6 text-center hover:border-primary-500 transition-colors group">
+          <div class="w-12 h-12 bg-primary-500/10 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-primary-500/20 transition-colors">
+            <i data-lucide="phone" class="w-6 h-6 text-primary-400"></i>
+          </div>
+          <p class="font-medium mb-1">Phone</p>
+          <p class="text-sm text-gray-400">+91-898-7315-385</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="py-8 border-t border-gray-800">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <span class="text-lg font-bold gradient-text">AK</span>
+          <span class="text-sm text-gray-500">Designed & Built by Aryan Kumar</span>
+        </div>
+
+        <div class="flex items-center gap-6">
+          <!-- Visitor Counter -->
+          <div class="flex items-center gap-2 text-sm text-gray-400">
+            <i data-lucide="eye" class="w-4 h-4 text-primary-400"></i>
+            <span id="visitor-count">0</span> visitors
+          </div>
+          <span class="text-sm text-gray-500">&copy; <span id="year"></span> Aryan Kumar</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main Script -->
+  <script type="module" src="/src/main.ts"></script>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    lucide.createIcons();
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
-
 </html>
